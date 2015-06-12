@@ -5,7 +5,7 @@ import {HttpClient} from 'aurelia-http-client';
 export class Flickr{
   heading = 'Flickr';
   images = [];
-  url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=mountain&tagmode=any&format=json';
+  url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=bonn,japanischer,garten&tagmode=all&format=json';
 
   constructor(http){
     this.http = http;

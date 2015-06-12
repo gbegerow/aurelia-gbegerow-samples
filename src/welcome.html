@@ -1,13 +1,13 @@
 <template>
 	<section class="au-animate">
-    <h2>Aurelia Demos</h2>
-    <div class="row">
-      <div repeat.for="row of router.navigation" class="col-md-1 demo-tile">
+    <!--<h2>Aurelia Demos</h2>-->
+    <div class="xrow">
+      <div repeat.for="row of router.navigation" class="demo-tile">
         <a href.bind="row.href" >
-      <i class="fa fa-5x ${row.config.icon}" if="${row.config.icon}"></i><br>
-			<span>${row.title}</span>
-			<!--<span>Icon: ${row.config.icon ? row.config.icon : 'unbekannt'}</span>      -->
-      </a>
+          <i class="fa fa-5x ${row.config.icon}" if="${row.config.icon}"></i><br>
+  			  <span>${row.title}</span>
+  			 <!--<span>Icon: ${row.config.icon ? row.config.icon : 'unbekannt'}</span>      -->
+        </a>
       </div>
     </div>
   </section>

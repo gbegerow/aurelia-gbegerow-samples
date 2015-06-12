@@ -15,8 +15,16 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+        <li repeat.for="row of router.navigation | filterTopLevel" class="${row.isActive ? 'active' : ''}">
           <a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1.in" href.bind="row.href">${row.title}</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Demos <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+             <li repeat.for="row of router.navigation | filterSecondaryLevel" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+        </li>
+          </ul>
         </li>
       </ul>
 

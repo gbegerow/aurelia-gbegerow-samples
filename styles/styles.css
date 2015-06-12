@@ -122,6 +122,10 @@ div.au-stagger {
 }
 
 .demo-tile {
+   display: inline-block;
+  width:150px;
+  height: 150px;
+  
   border: 1px solid black;
   box-shadow: 3px 3px darkgray;
   margin:15px;
@@ -132,4 +136,15 @@ div.au-stagger {
 
 .demo-tile i {
   margin: 6px;
+  
 }
+
+.demo-tile i:before {  
+   background: rgb(51, 122, 183);
+   /*background: -webkit-gradient(linear, left top, left bottom, from(rgb(51, 122, 183)), to(rgb(39, 88, 130))); darker */
+   /*background: -webkit-gradient(linear, left top, left bottom, from(rgb(88, 153, 208)), to(rgb(51, 122, 183))); */ /* lighter */
+   background: -webkit-gradient(linear, left top, left bottom, from(rgb(88, 153, 208)), to(rgb(39, 88, 130))); /* lighter to darker */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*display: initial;  reset Font Awesome's display:inline-block */
+}​
