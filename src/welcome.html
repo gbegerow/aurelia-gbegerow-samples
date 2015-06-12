@@ -1,21 +1,14 @@
 <template>
-  <section class="au-animate">
-    <h2>${heading}</h2>
-
-    <form role="form" submit.delegate="submit()">
-      <div class="form-group">
-        <label for="fn">First Name</label>
-        <input type="text" value.bind="firstName" class="form-control" id="fn" placeholder="first name">
+	<section class="au-animate">
+    <h2>Aurelia Demos</h2>
+    <div class="row">
+      <div repeat.for="row of router.navigation" class="col-md-1 demo-tile">
+        <a href.bind="row.href" >
+      <i class="fa fa-5x ${row.config.icon}" if="${row.config.icon}"></i><br>
+			<span>${row.title}</span>
+			<!--<span>Icon: ${row.config.icon ? row.config.icon : 'unbekannt'}</span>      -->
+      </a>
       </div>
-      <div class="form-group">
-        <label for="ln">Last Name</label>
-        <input type="text" value.bind="lastName" class="form-control" id="ln" placeholder="last name">
-      </div>
-      <div class="form-group">
-        <label>Full Name</label>
-        <p class="help-block">${fullName | upper}</p>
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+    </div>
   </section>
 </template>

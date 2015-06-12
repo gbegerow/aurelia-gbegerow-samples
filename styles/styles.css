@@ -120,3 +120,16 @@ div.au-stagger {
     opacity: 1;
   }
 }
+
+.demo-tile {
+  border: 1px solid black;
+  box-shadow: 3px 3px darkgray;
+  margin:15px;
+  padding: 15px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.demo-tile i {
+  margin: 6px;
+}
