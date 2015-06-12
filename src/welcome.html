@@ -3,6 +3,7 @@
     <!--<h2>Aurelia Demos</h2>-->
     <div class="xrow">
       <div repeat.for="row of router.navigation" class="demo-tile">
+        <span class="badge" if.bind="!row.config.done"> ${row.config.done ? '':'todo'}</span>
         <a href.bind="row.href" >
           <i class="fa fa-5x ${row.config.icon}" if="${row.config.icon}"></i><br>
   			  <span>${row.title}</span>

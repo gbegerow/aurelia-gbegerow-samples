@@ -1,0 +1,16 @@
+<!--<link rel="stylesheet" type="text/css" href="clickr-inc.css" >-->
+
+<template>
+  <section class="au-animate">
+
+   <div id="blob">
+     <div id="blue" class="blue" click.delegate="incBlue()">${blue}</div>
+     <div id="yellow" class="yellow" click.delegate="incYellow()">${yellow}</div>
+     <div id="red" class="red" click.delegate="incRed()">${red}</div>
+     <div id="green" class="green" click.delegate="incGreen()">${green}</div>
+   </div>
+   <div>${clicks} Clicks so far</div>
+   <div>${clickTotal} reached (max was ${max})</div>
+   <div class="message">${message}</div>
+  </section>
+</template>

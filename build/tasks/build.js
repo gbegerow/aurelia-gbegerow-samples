@@ -29,6 +29,13 @@ gulp.task('build-html', function () {
     .pipe(gulp.dest(paths.output));
 });
 
+// copies changed css files to the output directory
+gulp.task('build-css', function () {
+  return gulp.src(paths.style)
+    .pipe(changed(paths.output, {extension: '.css'}))
+    .pipe(gulp.dest(paths.output));
+});
+
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
@@ -36,7 +43,7 @@ gulp.task('build-html', function () {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html'],
+    ['build-system', 'build-html', 'build-css'],
     callback
   );
 });

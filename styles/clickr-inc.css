@@ -1,0 +1,64 @@
+#blob {
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;  
+  background-color: darkslategray; 
+  font-family: fantasy;
+  font-size: 300%;
+  user-select: none;
+}
+
+#blob div {
+   width: 47%;
+  height: 47%;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  margin:1%;
+   user-select: none;
+}
+
+.red {
+   background-color: darkred;
+   color: goldenrod;
+}
+
+.blue {
+   background-color: navy;
+   color: goldenrod;
+}
+
+.yellow {
+   background-color: yellow;
+   color:navy;
+}
+
+.green {
+   background-color: limegreen;
+   color:navy;
+}
+
+.message {
+  font-family: Calibri, Verdana, sans-serif;
+  font-size: 500%;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  color: darkcyan;
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+
+.victory {
+ 
+}
+
+.victory h1 {
+    font-family: Calibri, Verdana, sans-serif;
+  font-size: 500%;
+  text-align: center;
+  width: 100%;
+  color: goldenrod;
+  text-shadow: 3px 3px 2px rgba(150, 180, 180, 1);
+}
+

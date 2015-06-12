@@ -123,8 +123,9 @@ div.au-stagger {
 
 .demo-tile {
    display: inline-block;
-  width:150px;
-  height: 150px;
+   position: relative;
+  width:151px;
+  height: 151px;
   
   border: 1px solid black;
   box-shadow: 3px 3px darkgray;
@@ -139,6 +140,14 @@ div.au-stagger {
   
 }
 
+.demo-tile .badge {
+  position: absolute;
+  top: 2px;
+  right: -15px;
+  color: whitesmoke;
+  background-color: maroon;
+}
+
 .demo-tile i:before {  
    background: rgb(51, 122, 183);
    /*background: -webkit-gradient(linear, left top, left bottom, from(rgb(51, 122, 183)), to(rgb(39, 88, 130))); darker */
@@ -148,3 +157,4 @@ div.au-stagger {
   -webkit-text-fill-color: transparent;
   /*display: initial;  reset Font Awesome's display:inline-block */
 }​
+
