@@ -9,10 +9,8 @@
         </div>
       </div>
       
-      <ul>
-      <li class="loader" if.bind="router.isNavigating">
-          <i class="fa fa-spinner fa-spin fa-2x"></i>
-        </li>
-        </ul>
+      <div class="loader" if.bind="queryrunning">
+          <i class="fa fa-spinner fa-spin fa-5x"></i>
+      </div>
   </section>
 </template>
