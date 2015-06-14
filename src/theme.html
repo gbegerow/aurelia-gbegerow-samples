@@ -1,0 +1,20 @@
+<template>
+	<section>
+		<h2>Theme Support</h2>
+		<p>
+			Install e.g. Bootswatch theme with 
+			<code>jspm install github:thomaspark/bootswatch</code>
+		</p>
+		
+		<p>
+			Use css in app.js like 
+			<code>import 'thomaspark/bootswatch/paper/bootstrap.min.css!';</code>
+		</p>
+		
+		<p> Available Themes: 
+			<select value.bind="currentTheme">
+				<option repeat.for="t of themes" value="${t.href}">${t.name}</option>
+			</select>
+		</p>
+	</section>
+</template>

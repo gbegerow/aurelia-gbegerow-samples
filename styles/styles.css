@@ -145,11 +145,20 @@ div.au-stagger {
   top: 2px;
   right: -15px;
   color: whitesmoke;
-  background-color: maroon;
+}
+
+.badge.done {
+  background-color: darkgreen;
+}
+
+.badge.todo {
+  background-color: maroon;  
 }
 
 .demo-tile i:before {  
-   background: rgb(51, 122, 183);
+   color: rgb(51, 122, 183);
+   
+   /* Slight gradient over icons, only visible in webkit */
    /*background: -webkit-gradient(linear, left top, left bottom, from(rgb(51, 122, 183)), to(rgb(39, 88, 130))); darker */
    /*background: -webkit-gradient(linear, left top, left bottom, from(rgb(88, 153, 208)), to(rgb(51, 122, 183))); */ /* lighter */
    background: -webkit-gradient(linear, left top, left bottom, from(rgb(88, 153, 208)), to(rgb(39, 88, 130))); /* lighter to darker */
@@ -158,3 +167,7 @@ div.au-stagger {
   /*display: initial;  reset Font Awesome's display:inline-block */
 }​
 
+.filter {
+  float: right;
+  width: 20%;
+}

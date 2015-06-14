@@ -1,5 +1,7 @@
 import 'bootstrap';
 import 'bootstrap/css/bootstrap.css!';
+//import 'thomaspark/bootswatch/paper/bootstrap.min.css!';
+//import 'thomaspark/bootswatch/cosmo/bootstrap.min.css!';
 
 export class App {
   configureRouter(config, router){
@@ -18,7 +20,7 @@ export class App {
           { route: 'victory/:total',        moduleId: './victory',       nav: false, title:'You Won!' },
           { route: 'loose',  moduleId: './loose', nav: false, title:'You loose :-()' },
  
-      { route: 'northwind',  moduleId: './northwind', nav: true, title:'Northwind', icon: 'fa-database', done:0,settings: { level: 1, show: true } },
+      { route: 'northwind',  moduleId: './northwind', nav: true, title:'Northwind', icon: 'fa-database', done:0, tags:['db','breeze'], settings: { level: 1, show: true } },
       { route: 'adalauth',  moduleId: './adalauth', nav: true, title:'Authentification', icon: 'fa-users', done:0,settings: { level: 1, show: true } },
       { route: 'localization',  moduleId: './localization', nav: true, title:'Localization', icon: 'fa-globe', done:0,settings: { level: 1, show: true } },
       { route: 'child-router',  moduleId: './child-router', nav: true, title:'Child Router', icon: 'fa-sitemap', done:1,settings: { level: 1, show: true } },
@@ -26,7 +28,7 @@ export class App {
       { route: 'datavis',  moduleId: './datavis', nav: true, title:'Data Vis (D3)', icon: 'fa-area-chart', done: 0, settings: { level: 1, show: true } },
       { route: 'data3d',  moduleId: './data3d', nav: true, title:'WebGL', icon: 'fa-cube', done: 0, settings: { level: 1, show: true } },
       { route: 'gameengine',  moduleId: './gameengine', nav: true, title:'Game', icon: 'fa-rocket', done: 0, settings: { level: 1, show: true } },
-      { route: 'theme',  moduleId: './theme', nav: true, title:'Theme', icon: 'fa-paint-brush', done: 0, settings: { level: 1, show: true } },
+      { route: 'theme',  moduleId: './theme', nav: true, title:'Theme', icon: 'fa-paint-brush', done: 1, settings: { level: 1, show: true } },
       { route: 'moment',  moduleId: './moment', nav: true, title:'Moment', icon: 'fa-clock-o', done: 0, settings: { level: 1, show: true } },
       { route: 'debugit',  moduleId: './debugit', nav: true, title:'Debugging', icon: 'fa-bug', done: 0, settings: { level: 1, show: true } },
       { route: 'debugbinding',  moduleId: './debugbinding', nav: true, title:'Debug Binding', icon: 'fa-crosshairs', done: 0, settings: { level: 1, show: true } },

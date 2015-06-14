@@ -1,15 +1,15 @@
 <template>
 	<section class="au-animate">
+    <div class="filter input-group"><input type="text" class="form-control" placeholder="filter" value.bind="filter" ><span class="glyphicon glyphicon-filter input-group-addon"></span></div>
+      <div>Filter '${filter}': ${filteredDemos.length}</div>
     <!--<h2>Aurelia Demos</h2>-->
-    <div class="xrow">
-      <div repeat.for="row of router.navigation" class="demo-tile">
-        <span class="badge" if.bind="!row.config.done"> ${row.config.done ? '':'todo'}</span>
+      <div repeat.for="row of filteredDemos" class="demo-tile">
+        <span class="badge ${row.config.done?'done':'todo'}" xif.bind="!row.config.done"> ${row.config.done ? 'done':'todo'}</span>
         <a href.bind="row.href" >
           <i class="fa fa-5x ${row.config.icon}" if="${row.config.icon}"></i><br>
   			  <span>${row.title}</span>
   			 <!--<span>Icon: ${row.config.icon ? row.config.icon : 'unbekannt'}</span>      -->
         </a>
       </div>
-    </div>
   </section>
 </template>
