@@ -15,8 +15,8 @@ export class App {
       { route: 'validationform',    moduleId: './validationform',   nav: true, title:'Form Validation', icon: 'fa-check-square-o', done:0,settings: { level: 1, show: true }},
       { route: 'custelem',    moduleId: './custelem',   nav: true, title:'Custom Element', icon: 'fa-html5', done:0,settings: { level: 1, show: true }},
       { route: 'custatt',    moduleId: './custatt',   nav: true, title:'Custom Attribute', icon: 'fa-comment-o', done:0,settings: { level: 1, show: true }},
-      { route: 'flickr',        moduleId: './flickr',       nav: true, title:'Flickr', icon: 'fa-camera-retro', done:1,settings: { level: 1, show: true } },
-      { route: 'clickr',        moduleId: './clickr-inc',       nav: true, title:'Clickr Inc.', icon: 'fa-hand-o-left',done:1, settings: { level: 1, show: true } },
+      { route: 'flickr',        moduleId: './flickr',       nav: true, title:'Flickr', icon: 'fa-camera-retro', done:1, tags: ['http','bind','repeat'], settings: { level: 1, show: true } },
+      { route: 'clickr',        moduleId: './clickr-inc',       nav: true, title:'Clickr Inc.', icon: 'fa-hand-o-left',done:1, tags: ['event','click','delegate','bind','computedFrom','css','observer','candeactivate'], settings: { level: 1, show: true } },
           { route: 'victory/:total',        moduleId: './victory',       nav: false, title:'You Won!' },
           { route: 'loose',  moduleId: './loose', nav: false, title:'You loose :-()' },
  
@@ -49,7 +49,8 @@ export class App {
       { route: 'modal',  moduleId: './modal-demo', nav: true, title:'Modal Dialog', icon: 'fa-question' , done: 0, settings: { level: 1, show: true } },
       { route: 'lifecycle',  moduleId: './lifecycle', nav: true, title:'Lifecycle', icon: 'fa-retweet' , done: 0, settings: { level: 1, show: true } },
       { route: 'compose',  moduleId: './compose-demo', nav: true, title:'Compose', icon: 'fa-flask' , done: 0, settings: { level: 1, show: true } },
-      { route: 'di',  moduleId: './di-demo', nav: true, title:'Dependency Injection', icon: 'fa-download' , done: 0, settings: { level: 1, show: true } },
+      { route: 'di',  moduleId: './useconfig', nav: true, title:'Dependency Injection', icon: 'fa-cog' , done: 0, tags: ['di','dependency','singleton'],settings: { level: 1, show: true } },
+      //{ route: 'di',  moduleId: './di-demo', nav: true, title:'Dependency Injection', icon: 'fa-download' , done: 0, tags: ['di','dependency','singleton','transient'], settings: { level: 1, show: true } },
     ]);
     // fa-empire fa-rebel 
     this.router = router;
