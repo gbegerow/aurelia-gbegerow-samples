@@ -51,6 +51,7 @@ export class App {
       { route: 'compose',  moduleId: './compose-demo', nav: true, title:'Compose', icon: 'fa-flask' , done: 0, settings: { level: 1, show: true } },
       { route: 'di',  moduleId: './useconfig', nav: true, title:'Dependency Injection', icon: 'fa-cog' , done: 0, tags: ['di','dependency','singleton'],settings: { level: 1, show: true } },
       { route: 'params',  moduleId: './paramsdemo/:all', nav: true, title:'Route Parameter', icon: 'fa-cog' , done: 0, tags: ['di','dependency','singleton'],settings: { level: 1, show: true } },
+      { route: 'crud',  moduleId: './cruddemo/:id', nav: true, title:'CRUD', icon: 'fa-empire' , done: 0, tags: ['di','dependency','singleton'],settings: { level: 1, show: true } },
       //{ route: 'di',  moduleId: './di-demo', nav: true, title:'Dependency Injection', icon: 'fa-download' , done: 0, tags: ['di','dependency','singleton','transient'], settings: { level: 1, show: true } },
     ]);
     // fa-empire fa-rebel 

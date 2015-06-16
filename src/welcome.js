@@ -1,17 +1,17 @@
 import { inject, bindable, computedFrom } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
+//import {activationStrategy} from 'aurelia-router';
 
 @inject(Router)
 
 
 export class Welcome {
-	@bindable
-	filter = "";
+	@bindable filter = "";
 	demos;
-	done = true;
+	@bindable done = true;
 	
-// can do computedFrom('router.navigation')
-	@computedFrom('demos','filter') 
+// can do computedFrom('router.navigation') but demos seems cleaner
+	@computedFrom('demos','filter','done') 
 	get filteredDemos() {
 		let rx = new RegExp(this.filter, 'i');
 		let filtered = this.demos
@@ -34,6 +34,10 @@ export class Welcome {
 			this.done = false;
 		}
 	}
+	
+	//  determineActivationStrategy(){
+    // 	return activationStrategy.invokeLifecycle;
+  	// }
 }
 
 
