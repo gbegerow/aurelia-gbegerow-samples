@@ -1,0 +1,20 @@
+<template>
+	<section>
+		<h2>Debug Bindings</h2>
+	<h3>Orders</h3>
+    <ul>
+        <li repeat.for="order of customer.orders">
+			${odrer.title} ${odrer.ammount}
+        </li>
+    </ul>	
+	
+	<pre>
+		<!--customer -->
+		<!--JSON.stringify(customer) -->
+		<!-- debug -->
+		<!--${customer}-->
+	</pre>	
+    
+		
+	</section>
+</template>

@@ -20,7 +20,7 @@ export class App {
           { route: 'victory/:total',        moduleId: './victory',       nav: false, title:'You Won!' },
           { route: 'loose',  moduleId: './loose', nav: false, title:'You loose :-()' },
  
-      { route: 'northwind',  moduleId: './northwind', nav: true, title:'Northwind', icon: 'fa-database', done:0, tags:['db','breeze'], settings: { level: 1, show: true } },
+      { route: 'northwind',  moduleId: './northwind', nav: true, title:'Northwind', icon: 'fa-database', done:1, tags:['db','breeze','redirect'], settings: { level: 1, show: true } },
       { route: 'adalauth',  moduleId: './adalauth', nav: true, title:'Authentification', icon: 'fa-users', done:0,settings: { level: 1, show: true } },
       { route: 'localization',  moduleId: './localization', nav: true, title:'Localization', icon: 'fa-globe', done:0,settings: { level: 1, show: true } },
       { route: 'child-router',  moduleId: './child-router', nav: true, title:'Child Router', icon: 'fa-sitemap', done:1,settings: { level: 1, show: true } },
@@ -31,7 +31,7 @@ export class App {
       { route: 'theme',  moduleId: './theme', nav: true, title:'Theme', icon: 'fa-paint-brush', done: 1, settings: { level: 1, show: true } },
       { route: 'moment',  moduleId: './moment-demo', nav: true, title:'Moment', icon: 'fa-clock-o', done: 1, settings: { level: 1, show: true } },
       { route: 'debugit',  moduleId: './debugit', nav: true, title:'Debugging', icon: 'fa-bug', done: 0, settings: { level: 1, show: true } },
-      { route: 'debugbinding',  moduleId: './debugbinding', nav: true, title:'Debug Binding', icon: 'fa-crosshairs', done: 0, settings: { level: 1, show: true } },
+      { route: 'debugbinding',  moduleId: './debugbinding', nav: true, title:'Debug Binding', icon: 'fa-crosshairs', done: 1, settings: { level: 1, show: true } },
       { route: 'eventaggregator',  moduleId: './eventaggregator-demo', nav: true, title:'Event Aggregator', icon: 'fa-cubes', done: 0, settings: { level: 1, show: true } },
       { route: 'converter',  moduleId: './converter', nav: true, title:'Value Converter', icon: 'fa-filter', done: 0, settings: { level: 1, show: true } },
       { route: 'parts',  moduleId: './parts', nav: true, title:'Template Parts', icon: 'fa-puzzle-piece', done: 0, settings: { level: 1, show: true } },
@@ -50,6 +50,7 @@ export class App {
       { route: 'lifecycle',  moduleId: './lifecycle', nav: true, title:'Lifecycle', icon: 'fa-retweet' , done: 0, settings: { level: 1, show: true } },
       { route: 'compose',  moduleId: './compose-demo', nav: true, title:'Compose', icon: 'fa-flask' , done: 0, settings: { level: 1, show: true } },
       { route: 'di',  moduleId: './useconfig', nav: true, title:'Dependency Injection', icon: 'fa-cog' , done: 0, tags: ['di','dependency','singleton'],settings: { level: 1, show: true } },
+      { route: 'params',  moduleId: './paramsdemo/:all', nav: true, title:'Route Parameter', icon: 'fa-cog' , done: 0, tags: ['di','dependency','singleton'],settings: { level: 1, show: true } },
       //{ route: 'di',  moduleId: './di-demo', nav: true, title:'Dependency Injection', icon: 'fa-download' , done: 0, tags: ['di','dependency','singleton','transient'], settings: { level: 1, show: true } },
     ]);
     // fa-empire fa-rebel 
