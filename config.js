@@ -28,6 +28,7 @@ System.config({
     "core-js": "npm:core-js@0.9.15",
     "css": "github:systemjs/plugin-css@0.1.12",
     "font-awesome": "npm:font-awesome@4.3.0",
+    "moment": "github:moment/moment@2.10.3",
     "thomaspark/bootswatch": "github:thomaspark/bootswatch@3.3.4",
     "github:aurelia/animator-css@0.3.2": {
       "aurelia-templating": "github:aurelia/templating@0.12.1"

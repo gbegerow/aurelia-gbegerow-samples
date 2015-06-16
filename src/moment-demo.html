@@ -1,0 +1,19 @@
+<template>
+	<section>
+		<h2>Moment</h2>
+		
+		
+    <form role="form">
+      <div class="form-group">
+        <label for="fn">Birthday</label>
+        <input type="date" value.bind="birthday" class="form-control" id="bd" placeholder="birthday">
+      </div>
+     
+      <div class="form-group" if.bind="age">
+        You were born ${age}.
+      </div>
+    </form>
+
+		
+	</section>
+</template>

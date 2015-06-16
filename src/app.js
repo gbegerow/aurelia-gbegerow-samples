@@ -29,7 +29,7 @@ export class App {
       { route: 'data3d',  moduleId: './data3d', nav: true, title:'WebGL', icon: 'fa-cube', done: 0, settings: { level: 1, show: true } },
       { route: 'gameengine',  moduleId: './gameengine', nav: true, title:'Game', icon: 'fa-rocket', done: 0, settings: { level: 1, show: true } },
       { route: 'theme',  moduleId: './theme', nav: true, title:'Theme', icon: 'fa-paint-brush', done: 1, settings: { level: 1, show: true } },
-      { route: 'moment',  moduleId: './moment', nav: true, title:'Moment', icon: 'fa-clock-o', done: 0, settings: { level: 1, show: true } },
+      { route: 'moment',  moduleId: './moment-demo', nav: true, title:'Moment', icon: 'fa-clock-o', done: 1, settings: { level: 1, show: true } },
       { route: 'debugit',  moduleId: './debugit', nav: true, title:'Debugging', icon: 'fa-bug', done: 0, settings: { level: 1, show: true } },
       { route: 'debugbinding',  moduleId: './debugbinding', nav: true, title:'Debug Binding', icon: 'fa-crosshairs', done: 0, settings: { level: 1, show: true } },
       { route: 'eventaggregator',  moduleId: './eventaggregator-demo', nav: true, title:'Event Aggregator', icon: 'fa-cubes', done: 0, settings: { level: 1, show: true } },
