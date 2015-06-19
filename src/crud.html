@@ -1,0 +1,114 @@
+<template>
+    <section>
+        <h2>Internal Order</h2>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#orderhead" data-toggle="tab" id="goOrderHead" accesskey="b" tabindex="1">Order</a>
+            </li>
+            <li>
+                <a href="#orderpositions" data-toggle="tab" id="goOrderPositions" accesskey="p" tabindex="2">Positions</a>
+            </li>
+        </ul>
+        
+        <div id="tab-area" class="tab-content col-md-12">
+            <div id="orderhead" class="tab-pane active">
+                <div class="form-group">
+                    <label for="inputTitle" tabindex="100">Title</label>
+                    <input value.bind="order.title" class="form-control" id="inputTitle" maxlength="40" type="text" 
+                        placeholder="title" />
+                </div>
+                <div class="form-group">
+                    <label for="inputSupplier" class="required" tabindex="101">Supplier</label>
+                    <input type="text" id="inputSupplier" class="form-control" placeholder="supplier name" 
+                        value.bind="order.supplier" />
+                </div>
+                <div class="form-group">
+                    <label for="inputNotes" tabindex="106">Notes</label>
+                    <textarea class="form-control" id="inputNotes" value.bind="order.notes" rows="6"></textarea>
+                </div>
+            </div>
+            
+            <div id="orderpositions" class="tab-pane">
+                <div id="positonsgrid" class="spacing-line">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Pos.-Nr.</th>
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Ammount</th>
+                                <th>Total</th>
+                                <th>Delivery</th>
+                                <th if.bind="changesAllowed">Action</th>
+                            </tr>
+                            <tr if.bind="order.positions.length === 0">
+                                <td colspan="13">No Positions yet</td>
+                            </tr>
+                        </thead>
+                        <tbody repeat.for="pos of order.positions">
+                            <tr class="${isSelected?'active':''}">
+                                <td>${Positionnumber}></td>
+                                <td>${Title}></td>
+                                <td>${UnitNetPrice}></td>
+                                <td>${Ammount}></td>
+                                <td class="currency">${Total}</td>
+                                <td>${EstimatedDelivery}</td>
+                                <td>
+                                    <div class="btn-group btn-group-xs" if.bind="pos.allowChanges">
+                                        <a class="btn" title="Edit" click.delegate="editPosition" id="edit${Positionnumber}">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                        </a>
+                                        <a class="btn" click.delegate="removePosition" id="delete${Positionnumber}" title="Delete">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="positioncreate" if.bind="changesAllowed" with.bind="selectedPosition">
+                    <div class="btn-group btn-group-xs col-md-offset-4 col-md-8 right">
+                        <span class="glyphicon glyphicon-asterisk change" title="Changed" if.bind="isDirty"></span>
+                        <a class="btn" title="Save" id="savePositionTop" click.delegate="savePosition" 
+                            disabled.bind="isNotDirty" accesskey="s">
+                        <span class="glyphicon glyphicon-floppy-save"></span> 
+                        <span if.bind="isNewPosition">Add</span><span if.bind="!isNewPosition">Change</span> Position </a>
+                        <a class="btn" title="Cancel" click.delegate="cancelEditPosition" id="deletePositionTop" accesskey="x">
+                            <span class="glyphicon glyphicon-remove"></span> Cancel Changes</a>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPositionTitle" class="requiredOnPosition" tabindex="251">Title</label>
+                        <input type="text" class="form-control" maxlength="60" placeholder="position title" id="inputPositionTitle" 
+                            value.bind="SelectedPosition.Title"  />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPosUnitNetPrice" class="requiredOnPosition" tabindex="253">Price per Unit</label>
+                        <input type="text" value.bind="SelectedPosition.UnitNetPrice" id="inputPosUnitNetPrice" 
+                            class="form-control" placeholder="price" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPosAmmount" class="requiredOnPosition" tabindex="254">Ammount</label>
+                        <input type="text" value.bind="SelectedPosition.Ammount" id="inputPosAmmount" class="form-control"
+                            placeholder="ammount" />
+                        <label for="inputPosUnit" class="requiredOnPosition" tabindex="255">Unit</label>
+                        <input type="text" id="inputPosUnit" class="form-control" value.bind="SelectedPosition.Unit"
+                            placeholder="unit">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3">Total</label>
+                        <span class="col-md-5 help-block">${total}</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEstimatedDelivery" class="requiredOnPosition" tabindex="256">Estimated Delivery</label>
+                        <input type="date" class="form-control" value.bind="EstimatedDelivery" id="inputEstimatedDelivery"
+                        placeholder="estimated delivery" />
+                        <div class="label-warning" if.bind="deliveryInPast">Delivery is in the past. Is this Ok?</div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <pre>${order|stringify}</pre>
+</template>

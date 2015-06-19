@@ -24,7 +24,7 @@ export class Theme {
 		{ name: 'yeti', href: 'jspm_packages/github/thomaspark/bootswatch@3.3.4/yeti/bootstrap.min.css' },
 	];
 
-	@bindable currentTheme =this.themes["default"];
+	currentTheme =this.themes["default"];
 
 
 	currentThemeChanged(newvalue, oldvalue) {
