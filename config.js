@@ -27,6 +27,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.4",
     "core-js": "npm:core-js@0.9.15",
     "css": "github:systemjs/plugin-css@0.1.12",
+    "eternicode/bootstrap-datepicker": "github:eternicode/bootstrap-datepicker@1.4.0",
     "font-awesome": "npm:font-awesome@4.3.0",
     "moment": "github:moment/moment@2.10.3",
     "thomaspark/bootswatch": "github:thomaspark/bootswatch@3.3.4",

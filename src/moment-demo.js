@@ -4,7 +4,7 @@ import {bindable,inject, computedFrom} from 'aurelia-framework';
 import moment from 'moment'; 
 
 export class MomentDemo {
-	@bindable birthday; // : Date
+	@bindable birthday=new Date(2000,1,1); // : Date
 	
 	@computedFrom('birthday')
 	get age() {

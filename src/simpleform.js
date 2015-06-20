@@ -1,7 +1,7 @@
 import {computedFrom} from 'aurelia-framework';
 
 export class Simpleform{
-  heading = 'Welcome to the Aurelia Navigation App!';
+  heading = 'Simple Forms!';
   firstName = 'John';
   lastName = 'Doe';
   previousValue = this.fullName;
