@@ -13,7 +13,7 @@
 		
 		<p> Available Themes: 
 			<select value.bind="currentTheme">
-				<option repeat.for="t of themes" value="${t.href}">${t.name}</option>
+				<option repeat.for="theme of themes" model.bind="theme">${theme.name}</option>
 			</select>
 		</p>
 	</section>

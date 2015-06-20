@@ -5,11 +5,11 @@ import {HttpClient} from 'aurelia-http-client';
 export class Flickr{
   heading = 'Flickr';
 
-  @bindable queryrunning = true;
+  //@bindable queryrunning = true;
 
   images = [];
-  //url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=bonn,japanischer,garten&tagmode=all&format=json';
-  url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=paderquellen&tagmode=all&format=json';
+  url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=bonn,japanischer,garten&tagmode=all&format=json';
+  //url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=paderquellen&tagmode=all&format=json';
 
   constructor(http){
     this.http = http;

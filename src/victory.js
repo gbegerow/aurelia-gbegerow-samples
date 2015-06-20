@@ -1,5 +1,4 @@
-import {bindable, computedFrom} from 'aurelia-framework';
-
+import 'clickr-inc.css!';
 
 export class victory{
 	total;

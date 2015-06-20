@@ -6,6 +6,10 @@
   font-family: fantasy;
   font-size: 300%;
   user-select: none;
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -webkit-user-select: none; 
+  -o-user-select: none; 
 }
 
 #blob div {
@@ -16,7 +20,12 @@
   text-align: center;
   vertical-align: middle;
   margin:1%;
-   user-select: none;
+   
+  user-select: none;
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -webkit-user-select: none; 
+  -o-user-select: none; 
 }
 
 .red {
@@ -55,7 +64,7 @@
 
 .victory h1 {
     font-family: Calibri, Verdana, sans-serif;
-  font-size: 500%;
+  font-size: 200px;
   text-align: center;
   width: 100%;
   color: goldenrod;

@@ -58,8 +58,8 @@ export class ClickrInc{
       this.message = "Yep. You got it. Go on.";
     } else if (t > 10 && t < 16) {
       this.message="You are incredible!";
-     } else if (t > 10 && t < 16) {
-      this.message="You are incredible!";
+     } else if (t > 50 && t < 63) {
+      this.message="Run Forrest, Run!";
     } else if (t > 100 && t < 116) {
       this.message="Coming closer!";
     } else if (t > 70 && t < 80) {
@@ -70,9 +70,9 @@ export class ClickrInc{
   }
  
    incBlue() { 
-     let diff = Math.abs(this.green - this.yellow);
+     let diff = Math.abs(this.green - this.red);
      
-     if (diff < 15) {
+     if (diff < this.red) {
         this.blue += diff;
      } else {
        this.red = 0;
