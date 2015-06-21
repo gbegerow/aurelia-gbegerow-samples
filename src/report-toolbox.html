@@ -1,0 +1,8 @@
+<template>
+  <h3>Toolbox</h3>
+  <ul class="list-unstyled toolbox au-stagger" ref="toolboxList">
+    <li repeat.for="widget of widgets" class="au-animate" title="${widget.type}"><i class="fa ${widget.icon}"/> ${widget.name}</li>
+  </ul>
+  <button click.delegate="printReport()" type="button" class="btn btn-primary fa fa-print"> Print</button>
+  <button click.delegate="clearReport()" type="button" class="btn btn-warning fa fa-remove"> Clear Report</button>
+</template>

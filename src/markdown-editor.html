@@ -1,0 +1,24 @@
+<!--<link rel="stylesheet" type="text/css" href="/prism/prism.css">-->
+<!-- prism style moved to index -->
+<template>
+    <require from='./markdown-component'></require>
+
+    <div class="container-fluid">
+        <h2>Markdown Editor</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <textarea type="text" value.bind="markdownText" class="form-control" rows="20"></textarea>
+            </div>
+            <div class="col-sm-6">
+                <div markdown-component.bind="markdownText"></div>
+            </div>
+        </div>
+    </div>
+
+   <p class="text-info">Shamelessly stolen from 
+      <a href="https://github.com/pwkad">Patrick Walters</a>
+      <br>
+      <a href="https://github.com/PWKad/aurelia-samples">Original Sourcecode</a>
+</p>
+
+</template>

@@ -1,0 +1,124 @@
+
+.report {
+  border: 1px dashed black;
+  width: 500px;
+  height: 800px;
+  padding: 10px 0px;
+  font-size: 70%;
+}
+
+.toolbox li {
+  cursor: move;
+}
+
+.remove-widget {
+  cursor: pointer;
+}
+
+@media print
+{
+  .non-printable { display: none; }
+  .printable { display: block; }
+
+  .page-host {
+    position: absolute;
+    left: 10px;
+    right: 0;
+    top: 10px;
+    bottom: 0;
+    overflow-y: inherit;
+    overflow-x: inherit;
+  }
+}
+
+
+/* Animations */
+.toolbox>li.au-enter {
+  opacity: 0 !important;
+}
+.toolbox>li.au-enter-active {
+  -webkit-animation: fadeInDown 0.4s;
+  animation: fadeInDown 0.4s;
+}
+
+.toolbox.au-stagger {
+  -webkit-animation-delay:100ms;
+  animation-delay:100ms;
+}
+
+.report>li.au-enter {
+  opacity: 0 !important;
+}
+.report>li.au-enter-active {
+  -webkit-animation: fadeInDown 1.5s;
+  animation: fadeInDown 1.5s;
+}
+.report>li.au-leave {
+  opacity: 1 !important;
+}
+.report>li.au-leave-active {
+  -webkit-animation: shake 0.7s;
+  animation: shake 0.7s;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 50%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  30%, 70% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 50%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  30%, 70% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}

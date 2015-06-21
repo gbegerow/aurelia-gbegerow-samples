@@ -1,0 +1,16 @@
+<template>
+  <table class="table col-md-12">
+    <thead>
+      <th>#</th>
+      <th>Article</th>
+      <th>Price</th>
+    </thead>
+    <tbody>
+      <tr repeat.for="article of articles">
+        <td>${$index}</td>
+        <td>${article.name}</td>
+        <td>${article.price}</td>
+      </tr>
+    </tbody>
+  </table>
+</template>

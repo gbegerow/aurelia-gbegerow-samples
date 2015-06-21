@@ -49,13 +49,15 @@ export class App {
       { route: 'toasts',  moduleId: './toast-demo', nav: true, title:'Toasts', icon: 'fa-bullhorn', done: 0, settings: { level: 1, show: true }  },
       { route: 'unittests',  moduleId: './unittests', nav: true, title:'Unittests', icon: 'fa-ellipsis-v', done: 0, settings: { level: 1, show: true }  },
       { route: 'e2etests',  moduleId: './e2etests', nav: true, title:'End To End Tests', icon: 'fa-ellipsis-h' , done: 0, settings: { level: 1, show: true } },
-      { route: 'markdown',  moduleId: './markdown', nav: true, title:'Markdown Editor', icon: 'fa-edit', done: 0, settings: { level: 1, show: true }  },
+      { route: 'markdown',  moduleId: './markdown-editor', nav: true, title:'Markdown Editor', icon: 'fa-edit', done: 1, settings: { level: 1, show: true }  },
       { route: 'modal',  moduleId: './modal-demo', nav: true, title:'Modal Dialog', icon: 'fa-question' , done: 0, settings: { level: 1, show: true } },
       { route: 'lifecycle',  moduleId: './lifecycle', nav: true, title:'Lifecycle', icon: 'fa-retweet' , done: 0, settings: { level: 1, show: true } },
       { route: 'compose',  moduleId: './compose-demo', nav: true, title:'Compose', icon: 'fa-flask' , done: 0, settings: { level: 1, show: true } },
       { route: 'di',  moduleId: './useconfig', nav: true, title:'Dependency Injection', icon: 'fa-cog' , done: 0, tags: ['di','dependency','singleton'],settings: { level: 1, show: true } },
       { route: 'params/:all',  moduleId: './paramsdemo', nav: true, title:'Route Parameter', href:'params', icon: 'fa-cog' , done: 0, tags: ['query'],settings: { level: 1, show: true } },
       { route: 'crud',  moduleId: './crud', nav: true, title:'CRUD', icon: 'fa-empire' , done: 0, tags: ['form'], settings: { level: 1, show: true } },
+      { route: 'report',  moduleId: './report-builder', nav: true, title:'Report Builder', icon: 'fa-print' , done: 1, tags: ['form'], settings: { level: 1, show: true } },
+      
     ]);
     // fa-empire fa-rebel 
     this.router = router;

@@ -1,0 +1,10 @@
+<template>
+  <ul class="list-unstyled report" ref="reportSheet">
+    <li repeat.for="widget of widgets" class="au-animate">
+      <compose
+        model.bind="widget.model"
+        view-model="widgets/${widget.type}" class="col-md-11"></compose>
+      <i class="remove-widget fa fa-trash-o col-md-1 non-printable" click.trigger="$parent.removeWidget(widget)"></i>
+    </li>
+  </ul>
+</template>

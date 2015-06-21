@@ -30,6 +30,9 @@ System.config({
     "eternicode/bootstrap-datepicker": "github:eternicode/bootstrap-datepicker@1.4.0",
     "font-awesome": "npm:font-awesome@4.3.0",
     "moment": "github:moment/moment@2.10.3",
+    "prism": "github:PrismJS/prism@1.0.0",
+    "showdown": "github:showdownjs/showdown@1.1.0",
+    "sortable": "github:rubaxa/sortable@1.2.0",
     "thomaspark/bootswatch": "github:thomaspark/bootswatch@3.3.4",
     "github:aurelia/animator-css@0.3.2": {
       "aurelia-templating": "github:aurelia/templating@0.12.1"
