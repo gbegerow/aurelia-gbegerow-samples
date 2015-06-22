@@ -11,7 +11,7 @@ export class App {
     // Hirachic like https://github.com/cmichaelgraham/aurelia-typescript/tree/master/multi-level-menu
     config.map([
       { route: ['','welcome'],  moduleId: './welcome',      nav: true, title:'Welcome', icon: 'fa-home', done:1, settings: { level: 0, show: true } },
-      { route: 'interpolation',    moduleId: './interpolation',   nav: true, title:'Strings', icon: 'fa-magic', done:0,settings: { level: 1, show: true }},
+      { route: 'interpolation',    moduleId: './interpolation',   nav: true, title:'Strings', icon: 'fa-magic', done:1,settings: { level: 1, show: true }},
 
       { route: 'simpleform',    moduleId: './simpleform',   nav: true, title:'Simple Form', icon: 'fa-list-alt',done:1,  tags: ['form','bind'], settings: { level: 1, show: true }},
       { route: 'validationform',    moduleId: './validationform',   nav: true, title:'Form Validation', icon: 'fa-check-square-o', done:0, tags: ['form'], settings: { level: 1, show: true }},
