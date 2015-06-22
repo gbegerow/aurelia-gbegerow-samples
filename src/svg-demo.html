@@ -10,8 +10,19 @@
       stroke: #3040d0;
     }
   </style>
-  <circle repeat.for="point of data" cx.one-way="point.x" cy="100"  
+  
+  <!--<circle repeat.for="point of data" cx="${point.x}" cy="100"  
+    r.bind="${$parent.radius}" css="fill: ${point.color}" />-->
+  <!-- will work, but give an error in console for any expression -->  
+  
+  <!-- @gbegerow Use .bind instead the browser will try to parse the svg before aurelia has done any interpolation-->
+  
+  <circle repeat.for="point of data" cx.one-time="point.x" cy="100"  
     r.bind="$parent.radius" css="fill: ${point.color}" />
   <!--<text x="150" y="150">R: ${radius}</text>-->
 </svg>
+
+<form>
+  <input type="range" value.bind="radius" />
+</form>
 </template>
