@@ -1,3 +1,4 @@
+"use strict"
 import { customAttribute, inject } from 'aurelia-framework';
 import showdown from 'showdown';
 import prism from 'prism';

@@ -1,3 +1,4 @@
+"use strict"
 import {bindable, computedFrom} from 'aurelia-framework';
 
 export class Crud {

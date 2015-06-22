@@ -1,3 +1,4 @@
+"use strict"
 import {inject} from 'aurelia-framework';
 
 @inject(Element)

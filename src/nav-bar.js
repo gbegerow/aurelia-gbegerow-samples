@@ -1,3 +1,4 @@
+"use strict"
 import {bindable,computed} from 'aurelia-framework';
 
 export class NavBar {

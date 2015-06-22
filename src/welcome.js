@@ -1,3 +1,4 @@
+"use strict"
 import { inject, bindable, computedFrom } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 //import {activationStrategy} from 'aurelia-router';

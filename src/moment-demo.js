@@ -1,3 +1,4 @@
+"use strict"
 import {bindable,inject, computedFrom} from 'aurelia-framework';
 
 // jspm install moment

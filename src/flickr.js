@@ -1,3 +1,4 @@
+"use strict"
 import {inject,bindable} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 

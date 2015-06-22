@@ -7,10 +7,10 @@
     ],
     "tasks": [
         {
-            "taskName": "build",
+            "taskName": "watch",
             "args": [],
             "isBuildCommand": true,
-            "isWatching": false,
+            "isWatching": true,
             "problemMatcher": [
                 "$lessCompile",
                 "$tsc",

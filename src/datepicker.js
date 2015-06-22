@@ -1,3 +1,4 @@
+"use strict"
 import {inject, customElement, bindable} from 'aurelia-framework';
 import $ from 'jquery';
 import {moment} from 'moment';
