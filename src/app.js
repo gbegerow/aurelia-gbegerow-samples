@@ -58,6 +58,7 @@ export class App {
       { route: 'params/:all',  moduleId: './paramsdemo', nav: true, title:'Route Parameter', href:'params', icon: 'fa-cog' , done: 0, tags: ['query'],settings: { level: 1, show: true } },
       { route: 'crud',  moduleId: './crud', nav: true, title:'CRUD', icon: 'fa-empire' , done: 0, tags: ['form'], settings: { level: 1, show: true } },
       { route: 'report',  moduleId: './report-builder', nav: true, title:'Report Builder', icon: 'fa-print' , done: 1, tags: ['crud','drag','print','eventaggregator'], settings: { level: 1, show: true } },
+      { route: 'svg',  moduleId: './svg-demo', nav: true, title:'SVG', icon: 'fa-motorcycle' , done: 1, settings: { level: 1, show: true } },
       
     ]);
     // fa-empire fa-rebel 

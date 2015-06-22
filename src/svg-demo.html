@@ -1,0 +1,17 @@
+<template>
+	<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     width="600" height="300">
+  <style>
+    circle {
+      fill-opacity: 0.5;
+      stroke-width: 4;
+      fill: #3080d0;
+      stroke: #3040d0;
+    }
+  </style>
+  <circle repeat.for="point of data" cx="${point.x}" cy="100"  
+    r="${$parent.radius}" css="fill: ${point.color}" />
+  <text x="150" y="150">R: ${radius}</text>
+</svg>
+</template>
