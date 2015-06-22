@@ -10,8 +10,8 @@
       stroke: #3040d0;
     }
   </style>
-  <circle repeat.for="point of data" cx="${point.x}" cy="100"  
-    r="${$parent.radius}" css="fill: ${point.color}" />
-  <text x="150" y="150">R: ${radius}</text>
+  <circle repeat.for="point of data" cx.one-way="point.x" cy="100"  
+    r.bind="$parent.radius" css="fill: ${point.color}" />
+  <!--<text x="150" y="150">R: ${radius}</text>-->
 </svg>
 </template>
