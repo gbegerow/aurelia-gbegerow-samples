@@ -1,4 +1,5 @@
-"use strict"
+"use strict";
+
 export class Interpolation{
 	heading = "Demo String Interpolation";
 	name = "Bonn-To-Code";
