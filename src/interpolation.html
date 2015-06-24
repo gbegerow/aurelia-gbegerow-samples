@@ -1,7 +1,7 @@
 <template>
 	<section>
 		<h2>${heading}</h2>
-		<h1 class="${isVisible}?'':'hidden'">
+		<h1 class="${isVisible?'':'hidden'}">
 			${greetings} ${name}!
 		</h1>
 		
@@ -9,5 +9,5 @@
 			${message}
 		</p>
 	</section>
-	<pre>${this}</pre>
+	
 </template>

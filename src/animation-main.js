@@ -8,6 +8,7 @@ export function configure(aurelia) {
     
   aurelia
     .globalizeResources('converter/stringifyValueConverter');
+//    .globalizeResources('datepicker');
 
   aurelia.start().then(a => a.setRoot());
 }

@@ -6,7 +6,7 @@ import {HttpClient} from 'aurelia-http-client';
 export class Flickr{
   heading = 'Flickr';
 
-  //@bindable queryrunning = true;
+  @bindable queryrunning = true;
 
   images = [];
   url = 'http://api.flickr.com/services/feeds/photos_public.gne?tags=bonn,japanischer,garten&tagmode=all&format=json';
@@ -19,11 +19,11 @@ export class Flickr{
   activate(){
     return this.http.jsonp(this.url).then(response => {
       // throttle 2s
-      //setTimeout(()=> { // how to do it with promise? Should be cleaner
+      setTimeout(()=> { // how to do it with promise? Should be cleaner
         this.queryrunning = false;
         this.images = response.content.items;
-      //}, 2000);
+      }, 2000);
       
-    });
+    }); 
   }
 }
