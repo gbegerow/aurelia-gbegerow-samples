@@ -1,0 +1,59 @@
+<template>
+	<require from="./wizard"></require>
+	
+	<wizard-header>Header</wizard-header>
+	<wizard-page>
+		<h2>Page 1 von 5</h2>
+			<!--ul.list>lorem3.item*7-->
+
+		<ul class="list">
+			<li class="item">Lorem ipsum dolor.</li>
+			<li class="item">Voluptatum, deleniti, illo!</li>
+			<li class="item">Assumenda, dolorem ipsa.</li>
+			<li class="item">Beatae, sint, deserunt.</li>
+			<li class="item">Esse, fuga, nesciunt!</li>
+			<li class="item">Numquam, blanditiis, repellat.</li>
+			<li class="item">Aliquid, aliquam, facere!</li>
+		</ul>
+
+	</wizard-page>
+	<wizard-page>
+		<h2>Page 2 von 5</h2>
+			<!--ul.list>lorem3.item*7-->
+			<ol class="list">
+				<li class="item">Lorem ipsum dolor.</li>
+				<li class="item">Recusandae tempore, hic?</li>
+				<li class="item">Ex, obcaecati iure?</li>
+				<li class="item">Officiis, repudiandae, explicabo!</li>
+				<li class="item">Veniam, quae. Totam?</li>
+				<li class="item">Dolorem, sunt, corporis!</li>
+				<li class="item">Tenetur, a, laboriosam.</li>
+			</ol>
+	</wizard-page>
+	<wizard-page>
+		<h2>Page 3 von 5</h2>
+		<!--p>lorem-->
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe commodi alias nisi beatae amet iusto. Obcaecati, officia quaerat unde voluptatem magnam, consequatur, earum dolore exercitationem tempora deserunt ipsa veniam nobis.</p>
+	</wizard-page>
+	<wizard-page>
+		<h2>Page 4 von 5</h2>
+		<!--p>lorem7*5-->
+		<p>
+			<span>Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+			<span>Ut molestiae rerum id, odio ducimus possimus.</span>
+			<span>Temporibus, a obcaecati sint nisi deleniti non?</span>
+			<span>Cum itaque, ullam nesciunt aliquam recusandae, amet.</span>
+			<span>Delectus magnam corporis, maiores eveniet dolor minima.</span>
+		</p>
+	</wizard-page>
+	<wizard-page>
+		<h2>Page 5 von 5</h2>
+		<p>Finished.</p>
+	</wizard-page>
+	<wizard-buttons>
+		<button class="btn" 
+			click.trigger="$parent.selectOption($data); }, text: $data, css: { \'btn-primary\': $index() == 0, autofocus: $index() == 0 }"></button>',
+            
+	</wizard-buttons>
+	<wizard-footer></wizard-footer>
+</template>

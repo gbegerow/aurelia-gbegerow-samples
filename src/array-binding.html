@@ -1,0 +1,17 @@
+<template>
+	<h2>Summe der Quadrate (map + reduce)</h2>
+	<p>&sum;: ${sumOfSquares}<p>
+  <p>Length: ${values.length}</p>
+  <p>${number} occurs ${occurences}</p>
+		
+  <form role="form" submit.delegate="submit()">
+      <div class="form-group">
+        <label for="number">Use number</label>
+        <input type="text" value.bind="number" class="form-control" id="number" placeholder="number">
+      </div>
+
+      <button class="btn btn-default" click.trigger="incAll()">Increment all</button>
+      <button class="btn btn-default" click.trigger="pushNumber(number)">Push number</button>
+      <button class="btn btn-default" click.trigger="remNumber(number)">Remove number</button>
+    </form>
+</template>

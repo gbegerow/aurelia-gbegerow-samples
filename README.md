@@ -92,3 +92,9 @@ Integration tests are performed with [Protractor](http://angular.github.io/protr
   ```shell
   gulp e2e
   ```
+
+## Commit to github
+
+```shell
+git push origin master
+```
