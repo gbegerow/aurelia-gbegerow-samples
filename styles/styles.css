@@ -171,3 +171,11 @@ div.au-stagger {
   float: right;
   width: 20%;
 }
+
+.item {
+  display: inline-block;
+  border: 1px rgb(165, 192, 215) solid;
+  box-shadow: 2px 2px rgb(179, 209, 209);
+  padding: 2px;
+  margin: 3px;
+}

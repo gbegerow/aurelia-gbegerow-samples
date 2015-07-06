@@ -1,8 +1,14 @@
 <template>
-	<h2>Summe der Quadrate (map + reduce)</h2>
+  <section>
+	<h2>Summe der Quadrate</h2>
 	<p>&sum;: ${sumOfSquares}<p>
   <p>Length: ${values.length}</p>
-  <p>${number} occurs ${occurences}</p>
+  <p>${number} occurs at ${occurences}</p>
+  
+  <h3>Liste</h3>
+  <p>
+    <span class="item" repeat.for="value of values">${value}</span>
+  </p>
 		
   <form role="form" submit.delegate="submit()">
       <div class="form-group">
@@ -11,7 +17,8 @@
       </div>
 
       <button class="btn btn-default" click.trigger="incAll()">Increment all</button>
-      <button class="btn btn-default" click.trigger="pushNumber(number)">Push number</button>
-      <button class="btn btn-default" click.trigger="remNumber(number)">Remove number</button>
+      <button class="btn btn-default" click.trigger="pushNumber(number)">Add number to list</button>
+      <button class="btn btn-default" click.trigger="remNumber(number)">Remove number from list</button>
     </form>
+    <section>
 </template>
