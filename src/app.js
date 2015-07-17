@@ -31,7 +31,7 @@ export class App {
       { route: 'child-router', name: 'child-router', moduleId: './child-router', nav: true, title: 'Child Router', icon: 'fa-sitemap', done: 1, settings: { level: 1, show: true } },
       { route: 'maps', name: 'maps', moduleId: './maps', nav: true, title: 'Maps', icon: 'fa-map-marker', done: 0, settings: { level: 1, show: true } },
       { route: 'datavis', name: 'datavis', moduleId: './datavis', nav: true, title: 'Data Vis (D3)', icon: 'fa-area-chart', done: 0, settings: { level: 1, show: true } },
-      { route: 'data3d', name: 'data3d', moduleId: './data3d', nav: true, title: 'WebGL', icon: 'fa-cube', done: 0, settings: { level: 1, show: true } },
+      { route: 'data3d', name: 'data3d', moduleId: './data3d', nav: true, title: 'WebGL', icon: 'fa-cube', done: 1, settings: { level: 1, show: true } },
       { route: 'gameengine', name: 'gameengine', moduleId: './gameengine', nav: true, title: 'Game', icon: 'fa-rocket', done: 0, settings: { level: 1, show: true } },
       { route: 'theme', name: 'theme', moduleId: './theme', nav: true, title: 'Theme', icon: 'fa-paint-brush', done: 1, settings: { level: 1, show: true } },
       { route: 'moment', name: 'moment', moduleId: './moment-demo', nav: true, title: 'Moment', icon: 'fa-clock-o', done: 1, settings: { level: 1, show: true } },
