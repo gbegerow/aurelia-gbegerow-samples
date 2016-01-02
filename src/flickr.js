@@ -1,5 +1,9 @@
 "use strict"
 import {inject,bindable} from 'aurelia-framework';
+
+// We can't use the modern fetch client here as it does not 
+// support jsonp yet. Take a look at the githubusers demo for that  
+// no longer part of standard aurelia, use jspm install aurelia-http-client
 import {HttpClient} from 'aurelia-http-client';
 
 @inject(HttpClient)
@@ -17,6 +21,7 @@ export class Flickr{
   }
 
   activate(){
+      
     return this.http.jsonp(this.url).then(response => {
       // throttle 2s
       setTimeout(()=> { // how to do it with promise? Should be cleaner

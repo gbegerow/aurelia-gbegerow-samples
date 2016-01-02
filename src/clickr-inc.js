@@ -1,8 +1,6 @@
-"use strict"
 import {inject,bindable, computedFrom} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
 import {ObserverLocator} from 'aurelia-framework';
-import 'clickr-inc.css!';
 
 const blueIndex=0;
 const yellowIndex = 1;

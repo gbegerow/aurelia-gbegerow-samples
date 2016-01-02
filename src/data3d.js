@@ -3,8 +3,9 @@ import {inject} from 'aurelia-framework';
 // jspm install handjs=github:deltakosh/handjs
 import handjs from 'handjs';
 
-//jspm install babylonjs=github:BabylonJS/Babylon.js
-import BABYLON  from 'babylonjs';
+//jspm install babylonjs=github:BabylonJS/babylon.js
+import  BABYLON  from "babylonjs/dist/babylon.2.2.js";
+//import BABYLON  from 'babylonjs';
 
 export class Data3D { 
 	canvas;
@@ -16,13 +17,9 @@ export class Data3D {
 		// use a ref="canvas" attribute in template to init property
 	}
 	
-	activate() {
-		// Babylon ist verschachtelt????
-		//this.startBabylonJS(BABYLON.BABYLON);
-	}
-	
 	attached() {
-		this.startBabylonJS(BABYLON.BABYLON);
+        //debugger;
+		this.startBabylonJS(BABYLON);
 
 	}
 	

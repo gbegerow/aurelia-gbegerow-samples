@@ -1,6 +1,6 @@
-"use strict"
 import {inject} from 'aurelia-framework';
 import {EventAggregator} from 'aurelia-event-aggregator';
+//jspm install sortable=github:rubaxa/sortable
 import sortable from 'sortable';
 
 @inject(EventAggregator)

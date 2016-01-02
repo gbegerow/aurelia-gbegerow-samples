@@ -1,10 +1,10 @@
-"use strict"
-import {inject, customElement, bindable} from 'aurelia-framework';
+import {inject, customElement, bindable, computedFrom} from 'aurelia-framework';
 import $ from 'jquery';
-import {moment} from 'moment';
+import moment from 'moment';
 
+// jspm install github:eternicode/bootstrap-datepicker
 import 'eternicode/bootstrap-datepicker/js/bootstrap-datepicker';
-import 'eternicode/bootstrap-datepicker/css/bootstrap-datepicker.min.css!';
+//import 'eternicode/bootstrap-datepicker/css/bootstrap-datepicker.min.css!';
 
 
 @inject(Element)
@@ -17,6 +17,8 @@ export class DatePicker {
 
     constructor(element) {
         this.element = element;
+        
+        moment().locale(this.language)
     }
 
     attached() {
@@ -26,7 +28,7 @@ export class DatePicker {
                 language: this.language,
                 showClose: true,
                 showTodayButton: false,
-                orientation: "top left"
+                //orientation: "bottom left"
             });
 
         this.datePicker.on("changeDate", (e) => {
@@ -34,4 +36,14 @@ export class DatePicker {
             console.log("Date changed: "+ e.date);
             });
     }
+    
+    @computedFrom('value')
+	get display() {
+		if (this.value) {
+            moment().locale(this.language)
+			return moment(this.value).format("DD.MM.YYYY");
+		}
+		return undefined;
+	}
+
 }

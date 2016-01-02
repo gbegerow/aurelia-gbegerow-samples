@@ -1,7 +1,12 @@
 "use strict"
 import { customAttribute, inject } from 'aurelia-framework';
+
+// jspm install showdown=github:showdownjs/showdown
 import showdown from 'showdown';
-import prism from 'prism';
+
+// customized prism.js, so can't be installed via jspm
+import prism from '/prism/prism';
+import "/prism/prism.css!"
 
 @customAttribute('markdown-component')
 @inject(Element)
@@ -21,7 +26,7 @@ export class MarkdownComponent {
       );
     
     // syntax highlighting
-    // prism.highlightAll();
+    // prism.highlightAll( this.element.querySelectorAll('code') );
     var elements = this.element.querySelectorAll('code');
 
     for (var i = 0, element; element = elements[i++];) {

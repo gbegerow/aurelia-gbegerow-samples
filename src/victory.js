@@ -1,5 +1,3 @@
-"use strict"
-import 'clickr-inc.css!';
 
 export class victory{
 	total;

@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Aurelia</title>
-    <link rel="stylesheet" type="text/css" href="jspm_packages/npm/font-awesome@4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="/prism/prism.css">
+    <link rel="stylesheet" href="jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body aurelia-app="animation-main">
+
+  <body aurelia-app="main">
     <div class="splash">
       <div class="message">Aurelia Demo</div>
       <i class="fa fa-spinner fa-spin"></i>
@@ -15,7 +16,6 @@
 
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
-    <script src="prism/prism.js"></script>
     <script>
       System.import('aurelia-bootstrapper');
     </script>

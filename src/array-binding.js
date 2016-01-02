@@ -13,19 +13,21 @@ export class ArrayBinding {
 
 	disposeSubscriptions = null;
 	constructor(obsLoc) {
+        
+        
 		for (var i = 0; i < 100; i++) {
 			this.values.push(i);
 		}
 		
 		// computedFrom will only watch the array but not the elements
 		// so we will need an additional observer
-		var arrayObserver = obsLoc.getArrayObserver(this.values);
+		var arrayObserver = obsLoc.getArrayObserver(this.values)
+        this.observer=arrayObserver;
+        
 		this.disposeSubscriptions = arrayObserver.subscribe((slices) => {
 			console.log("values has changed");
-			// trigger array observation (will trigger twice :-) )
-			let temp = this.values;
-			this.values = [];
-			this.values = temp;
+			this.triggerObserve();
+			
 		});
 
 	}
@@ -67,6 +69,7 @@ export class ArrayBinding {
 		for (var i = 0; i < this.values.length; i++) {
 			this.values[i]++;
 		}
+        this.observer.call();        
 	}
 
 	pushNumber(number) {
@@ -82,4 +85,10 @@ export class ArrayBinding {
 		}
 	}
 
+    triggerObserve() {
+        // trigger array observation (should trigger twice :-() )
+        let temp = this.values;
+		this.values = [];
+		this.values = temp;
+    }
 }
