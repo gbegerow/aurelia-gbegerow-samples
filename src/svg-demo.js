@@ -1,4 +1,4 @@
-"use strict";
+;
 
 export class SvgDemo {
 	radius = 50;

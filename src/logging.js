@@ -1,4 +1,3 @@
-"use strict"
 import {inject,LogManager} from 'aurelia-framework';
 
 const logger = LogManager.getLogger('loggerSample');

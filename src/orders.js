@@ -1,4 +1,4 @@
-"use strict"
+
 export class ChildRouter{
   heading = 'Orders';
 

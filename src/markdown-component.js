@@ -1,4 +1,4 @@
-"use strict"
+
 import { customAttribute, inject } from 'aurelia-framework';
 
 // jspm install showdown=github:showdownjs/showdown

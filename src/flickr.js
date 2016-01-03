@@ -1,4 +1,4 @@
-"use strict"
+
 import {inject,bindable} from 'aurelia-framework';
 
 // We can't use the modern fetch client here as it does not 

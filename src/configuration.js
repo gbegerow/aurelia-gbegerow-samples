@@ -1,4 +1,4 @@
-"use strict"
+
 import {singleton} from 'aurelia-framework';
 
 @singleton()
